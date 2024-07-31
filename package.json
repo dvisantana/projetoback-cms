@@ -1,0 +1,11 @@
+{
+  "name": "projetoback-cms",
+  "version": "1.0.0",
+  "description": "Projeto do trabalho de Back-end, grupo: Davi, Giovani e Victor.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Davi, Giovani & Victor",
+  "license": "ISC"
+}
