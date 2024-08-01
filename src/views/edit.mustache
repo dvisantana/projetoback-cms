@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Página</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Editar Página</h1>
+  <form action="/admin/edit/{{url}}" method="POST">
+    <label for="content">Conteúdo da Página:</label>
+    <textarea id="content" name="content" rows="10" required>{{content}}</textarea>
+    <button type="submit">Salvar Alterações</button>
+  </form>
+  <a href="/">Voltar para Home</a>
+</body>
+</html>
