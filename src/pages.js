@@ -54,4 +54,57 @@ router.post('/admin/create', checkAuth, (req, res) => {
   });
 });
 
+// Edição de página
+router.get('/admin/edit/:url', checkAuth, (req, res) => {
+  const pageUrl = req.params.url;
+  const filePath = path.join(pagesDir, `${pageUrl}.txt`);
+
+  fs.readFile(filePath, 'utf8', (err, content) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Erro ao carregar a página para edição');
+    }
+    res.render('edit', { title: pageUrl ,url: pageUrl, content });
+  });
+});
+
+router.post('/admin/edit/:url', (req, res) => {
+  const pageUrl = req.params.url;
+  const { content } = req.body;
+  const filePath = path.join(pagesDir, `${pageUrl}.txt`);
+
+  fs.writeFile(filePath, content, (err) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Erro ao salvar as alterações da página');
+    }
+    res.redirect('/');
+  });
+});
+
+// Exclusão de página
+router.get('/admin/delete/:url', checkAuth, (req, res) => {
+  const pageUrl = req.params.url;
+  const filePath = path.join(pagesDir, `${pageUrl}.txt`);
+
+  fs.unlink(filePath, (err) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Erro ao deletar a página');
+    }
+    res.redirect('/');
+  });
+});
+
+// Visualização de página
+router.get('/:page', (req, res) => {
+    const page = req.params.page;
+    const filePath = path.join(pagesDir, `${page}.txt`);
+    fs.readFile(filePath, 'utf-8', (err, data) => {
+      if (err) res.status(404).send('Página não encontrada');
+      else res.render('page', { title: page, content: data });
+    });
+  });
+
+
 module.exports = router;
