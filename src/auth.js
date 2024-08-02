@@ -7,7 +7,7 @@ router.get('/login', (req, res) => {
 
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
-  if (username === process.env.ADMIN_LOGIN && password === process.env.ADMIN_PASSWORD) {
+  if (username === "admin" && password === "admin") {
     req.session.user = username;
     res.redirect('/');
   } else {

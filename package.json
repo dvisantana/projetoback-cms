@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Projeto do trabalho de Back-end, grupo: Davi, Giovani e Victor.",
   "main": "app.js",
+  "start": "nodemon main",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +17,8 @@
     "express-session": "^1.18.0",
     "mustache-express": "^1.3.2",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
