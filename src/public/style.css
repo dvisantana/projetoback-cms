@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    width: 100dvw;
+    color: white;
+  }
+  
+  form {
+    margin: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    font-family: 'Poppins';
+    padding: 10px 20px;
+    background-color: #377c39;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #234e25;
+  }
+
+  .page-list a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .page-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    background: rgb(71,162,75);
+    background: radial-gradient(circle, rgba(71,162,75,1) 26%, rgba(76,175,80,1) 97%);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    min-width:200px;
+    max-width: fit-content;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50dvw;
+  }
