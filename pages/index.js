@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 
-const pagesDir = path.join(__dirname, 'pages');
+const pagesDir = path.join(__dirname, '../postPages');
 
 // Middleware para verificar login
 function checkAuth(req, res, next) {

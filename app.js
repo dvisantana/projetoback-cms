@@ -3,7 +3,7 @@ const mustacheExpress = require('mustache-express');
 const path = require('path');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-require('dotenv').config({ path: '../config/.env' });
+require('dotenv').config();
 
 const app = express();
 const PORT = 3000;
@@ -14,15 +14,15 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
-  secret: process.env.SESSION_SECRET || "segredinhohihi",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
 }));
 
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
-const authRoute = require('./auth')
-const pagesRoute = require('./pages')
+const authRoute = require('./pages/auth')
+const pagesRoute = require('./pages/index')
 
 app.use('/', authRoute)
 app.use('/', pagesRoute)
