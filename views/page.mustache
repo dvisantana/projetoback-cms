@@ -2,22 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{.}}</title>
+  <title>{{title}}</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="page.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
-    <h1>{{.}}</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/admin">Criar nova página</a></li>
-      </ul>
-    </nav>
+    <a href="/">
+      <div class="logoHeader">
+        <img class="logo" src="../../fastpage-icon-white.png">
+        <h1>FastPages</h1>
+      </div>
+    </a>
+
+    <h1>{{title}}</h1>
+
+    <div style="padding: 0 16px">
+      <a href="/"><button>Home</button></a>
+      <a href="/admin"><button>Criar nova página</button></a>
+    </div>
   </header>
+
   <main>
-    {{{content}}}
+    <div class="page-content">
+        <p style="word-break: break-word;">{{{content}}}</p>
+    </div>
   </main>
+
   <footer>
     <p>&copy; FastPages</p>
   </footer>

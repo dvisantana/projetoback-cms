@@ -47,7 +47,8 @@ router.post('/admin/create', checkAuth, (req, res) => {
     fs.writeFile(filePath, content, (err) => {
       if (err) {
         console.error(err);
-        return res.status(500).send('Erro ao salvar a página');
+        // return res.status(500).send('Erro ao salvar a página');
+        return res.redirect('/admin?error=Erro+ao+salvar+a+página.');
       }
       res.redirect('/');
     });

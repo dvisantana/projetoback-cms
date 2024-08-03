@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<h1>Você precisa estar autenticado para criar e/ou editar páginas</h1>
-  <div class="login-wrapper">
-    <form action="/login" method="POST">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+
+  <body class="loginBody">
+    {{! <header>
+      <h1>FastPages</h1>
+    </header> }}
+
+    <div class="login-wrapper">
+      <div class="loginHeader">
+        <img class="logo" src="fastpage-icon-green.png">
+        <h1>FastPages</h1>
+      </div>
+
+      <div class="loginContent">
+        <form action="/login" method="POST">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Entrar</button>
+          <div class="entrarSemLogin">
+            <a href="/">Entrar sem login</a>
+          </div>
+        </form>
+
+        <p>Você precisa estar autenticado para criar e/ou editar páginas.</p>
+      </div>
+    </div>
+
+  </body>
 </html>

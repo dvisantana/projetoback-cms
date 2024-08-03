@@ -4,9 +4,18 @@
   <meta charset="UTF-8">
   <title>Home</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body class="home-wrapper">
-  <h1>FastPages</h1>
+    <header>
+      <div class="logoHeader">
+        <img class="logo" src="fastpage-icon-white.png">
+        <h1>FastPages</h1>
+      </div>
+
+      <a href="/logout"><button id="edit-button">Sair</button></a>
+    </header>
     <div class="page-list">
       {{#pages}}
           <a href="/{{.}}">

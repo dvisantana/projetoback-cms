@@ -1,0 +1,13 @@
+p{
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    word-break: break-word; /* Quebra palavras longas */
+    white-space: normal;
+    margin: 0;
+}
+
+header{
+    a{
+        text-decoration: none;
+        padding: 0;
+    }
+}
